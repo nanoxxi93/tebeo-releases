@@ -1,0 +1,4 @@
+# Los APK se suben como adjuntos de cada versión publicada, no al repositorio: en git pesarían
+# para siempre y no se pueden borrar de una descarga que ya hizo alguien.
+*.apk
+*.aab
