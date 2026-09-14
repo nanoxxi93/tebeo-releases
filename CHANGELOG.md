@@ -3,6 +3,59 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [1.3.0] — 2026-09-14
+
+Vídeos: se listan con su miniatura, se abren en un reproductor propio y se reanudan donde se dejaron.
+
+### Añadido
+
+- **Un reproductor de vídeo**, aparte del visor de imágenes. Abre MP4, MKV, WebM, AVI, MOV, TS y
+  otros desde cualquier almacenamiento, y salta a la mitad de un fichero de red sin bajar lo de
+  antes.
+- **Los controles de abajo**: bloquear la rotación, vídeo anterior y siguiente de la misma carpeta,
+  reproducir o pausar, y un panel de más opciones con el modo de ajuste —que cambia con cada toque
+  entre ajustar, rellenar, estirar y tamaño original—, la repetición A-B, la velocidad de 0,5x a
+  2x, las pistas de audio y de subtítulos, y el bloqueo de controles. Se ocultan solos pasados unos segundos sin tocarlos,
+  también con el panel abierto.
+- **Un menú de tres puntos** arriba con «Reproducir el siguiente», que al acabar un vídeo empieza el
+  siguiente de la carpeta; los ajustes de subtítulos; cuánto tardan en ocultarse los controles
+  (3, 5, 7, 10 o 15 segundos, o nunca), y la ficha de información.
+- **Ajustes de subtítulos**: tamaño y color, que se guardan, y la sincronía de este vídeo, para
+  adelantarlos o retrasarlos cuando no van a tiempo.
+- **Volver atrás unos segundos no vuelve a leer el vídeo.** Lo reproducido en los últimos treinta
+  segundos se guarda, así que un doble toque atrás o el salto de una repetición A-B no descargan
+  otra vez por la red.
+- **Gestos**: doble toque a la izquierda o a la derecha para retroceder o avanzar diez segundos;
+  arrastrar en vertical para el brillo, a la izquierda, o el volumen, a la derecha; y arrastrar en
+  horizontal para moverse en el tiempo.
+- **Subtítulos** incrustados en el vídeo o sueltos a su lado: un .srt, .ass, .ssa o .vtt que se
+  llame igual, con o sin el idioma detrás («peli.es.srt»).
+- **Una ficha de información** con el códec de cada pista de vídeo, audio y subtítulos, y cuáles no
+  sabe decodificar el teléfono.
+- **Miniaturas de vídeo** en el navegador, sacadas de un fotograma sin bajarse el vídeo.
+- **Los vídeos entran en el historial** con el minuto por el que se iban, mezclados por fecha con
+  las lecturas. Al volver a abrir uno, desde el historial o desde la carpeta, sigue ahí.
+
+### Cambiado
+
+- **El historial guarda como mucho 100 entradas, sumando lecturas y vídeos.** Antes eran 200
+  lecturas: quien tuviera más perderá las más antiguas la próxima vez que se guarde algo.
+- **El tipo de servidor se elige en un desplegable**, en lugar de una fila de botones donde los
+  nombres salían cortados.
+- **El nombre de una pestaña que no cabe se encoge** en lugar de partirse en dos líneas.
+- **Por FTP, un tramo de un fichero se lee de un tirón.** Una página dentro de un CBZ cuesta una
+  conexión de datos en lugar de una por trozo.
+
+### Conocido
+
+- **No hay decodificadores propios**, así que AC-3, E-AC-3 y sobre todo DTS dependen del teléfono.
+  Si ninguna pista de audio de un vídeo es compatible, se ve sin sonido y se avisa.
+- **Los subtítulos se pintan como texto**: sin los estilos de un ASS y sin subtítulos de imagen
+  (PGS, VobSub).
+- **Los subtítulos incrustados en el vídeo solo se pueden retrasar**; los sueltos, adelantar y
+  retrasar.
+- **Los vídeos de un servidor DLNA se listan, pero todavía no se abren.**
+
 ## [1.2.1] — 2026-09-12
 
 Abrir la pestaña Almacenamiento ya no espera a la red.

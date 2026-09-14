@@ -32,7 +32,13 @@ automática. Zoom que se mantiene al pasar hoja, zonas de toque configurables y 
 temporizador. Para escaneos regulares: escala de grises, invertir, contraste automático, reescalado
 (bilineal, bicúbico y Lanczos-3) y enfoque por máscara.
 
-Guarda por dónde ibas en cada carpeta y en cada tomo. No sube nada a ninguna parte: no hay cuentas,
+**Vídeos**
+
+Los vídeos de las mismas carpetas se abren en un reproductor propio, que salta a mitad de un
+fichero del NAS sin bajar lo anterior: pistas de audio y subtítulos, repetición A-B, velocidad,
+gestos de tiempo, brillo y volumen, y paso automático al siguiente de la carpeta.
+
+Guarda por dónde ibas en cada carpeta, en cada tomo y en cada vídeo. No sube nada a ninguna parte: no hay cuentas,
 ni anuncios, ni telemetría.
 
 **Qué no hace**
@@ -63,15 +69,15 @@ paquete cambiándole la firma.
 Cada versión publica el SHA-256 de su APK en las notas. Para comprobarlo:
 
 ```bash
-sha256sum tebeo-1.2.1.apk
+sha256sum tebeo-1.3.0.apk
 ```
 
-En Windows, `certutil -hashfile tebeo-1.2.1.apk SHA256`.
+En Windows, `certutil -hashfile tebeo-1.3.0.apk SHA256`.
 
 Y para confirmar quién firmó el paquete, con las herramientas del SDK de Android:
 
 ```bash
-apksigner verify --print-certs tebeo-1.2.1.apk
+apksigner verify --print-certs tebeo-1.3.0.apk
 ```
 
 La huella del certificado es la misma en todas las versiones, y es esta:
