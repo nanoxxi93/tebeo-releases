@@ -3,6 +3,35 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.1.0] — 2026-09-18
+
+Lo que salió al usar la 2.0 en el teléfono: volver al vídeo que suena de fondo, una barra de
+edición que cabe en vertical y menús ordenados.
+
+### Añadido
+
+- **Franja «Reproduciendo» en Inicio.** Si un vídeo abierto con «Abrir con» sigue sonando de fondo,
+  sale abajo con su nombre y play/pausa, y tocarla vuelve al reproductor.
+
+### Cambiado
+
+- **La barra de edición de Carpetas lleva cinco botones**: Copiar, Mover, Renombrar, Borrar y
+  «Ver más», que abre Descargar. Antes eran siete y en un teléfono en vertical no cabían.
+- **Crear carpeta es el «+» de arriba, junto a la lupa**, y ya no hace falta entrar en edición.
+- **«N/M seleccionados» va en la barra de título**, en lugar de una barra propia que quitaba sitio al
+  listado.
+- **Los menús de tres puntos del visor y del reproductor van en grupos**, con lo más usado arriba y
+  borrar solo, al final.
+
+### Corregido
+
+- **El menú del reproductor se cortaba** en vertical: ahora se desplaza.
+- **La notificación de «Seguir sonando al salir» dice el nombre del vídeo** y la carpeta, en lugar
+  de «Tebeo se está ejecutando».
+- **Tocar esa notificación lleva al reproductor.** Antes no hacía nada.
+- **Abrir Tebeo con el vídeo en miniatura ya no crea otra copia de la app**, en la que el vídeo
+  seguía sonando sin forma de volver a él.
+
 ## [2.0.0] — 2026-09-18
 
 Dos protocolos nuevos, copiar entre almacenamientos y descargar para leer sin conexión, el
