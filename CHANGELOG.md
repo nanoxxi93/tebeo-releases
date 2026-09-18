@@ -3,6 +3,211 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.0.0] — 2026-09-18
+
+Dos protocolos nuevos, copiar entre almacenamientos y descargar para leer sin conexión, el
+reproductor en la pantalla de bloqueo y en segundo plano, bloqueo con huella y pasar página con
+teclado, mando o ratón.
+
+### Añadido
+
+- **Servidores SFTP.** El protocolo de cualquier NAS o servidor con SSH, con contraseña o con clave
+  privada. Un CBZ grande abre por cualquier página sin bajarse entero. La primera vez se guarda la
+  huella del servidor, y si cambia, la app avisa en vez de conectar.
+- **Catálogos OPDS: Komga, Kavita, Calibre-Web.** Se navega por series y tomos, y un tomo que el
+  servidor sirve por páginas se lee página a página, sin bajar el CBZ. Las portadas las da el propio
+  catálogo.
+- **Copiar entre almacenamientos.** En Carpetas, en modo edición: del NAS al teléfono, del teléfono a
+  pCloud, entre dos servidores. Escribe en el teléfono, SMB, FTP, SFTP, WebDAV, S3 y pCloud. Sigue
+  copiando aunque salgas de la app, con aviso y botón de cancelar, y lo que ya está con el mismo
+  nombre y tamaño se salta.
+- **Descargar para leer sin conexión.** Baja lo marcado a `Download/Tebeo` del teléfono. Repetir la
+  descarga de una serie solo baja lo que falta.
+- **Reproductor en la pantalla de bloqueo y en los auriculares**: pausa, reanudar, siguiente y
+  anterior.
+- **Seguir sonando al salir**, en el menú del reproductor: el vídeo sigue sonando con la app en
+  segundo plano o con la pantalla apagada.
+- **Temporizador de apagado** en el reproductor: de 10 a 90 minutos, o al acabar el vídeo.
+- **Bloqueo con huella o con el código del teléfono**, al abrir la app y al volver tras el tiempo que
+  elijas: siempre, 1, 5 o 15 minutos.
+- **Ocultar el contenido en Recientes**, que también impide las capturas de pantalla.
+- **Aviso de versión nueva.** Una vez al día se mira si hay una publicada, y el aviso abre su página.
+  Se puede apagar y comprobar a mano en Ajustes.
+- **Pasar página con teclado, pasapáginas Bluetooth, mando y rueda del ratón.** Las flechas siguen el
+  sentido de lectura: en manga, la izquierda avanza. Inicio y Fin van a la primera y la última.
+- **Tomo siguiente o anterior también entre CBZ y ZIP** de la misma carpeta.
+- **Compartir, guardar en el carrete o poner de fondo** la página que se está viendo, con los filtros
+  puestos.
+- **GIF y WebP animados** se mueven en el visor.
+- **Portadas de CBZ y ZIP** en Carpetas, sacadas de su primera página.
+- **«Abrir con» acepta CBZ y ZIP** desde otras apps, no solo imágenes y vídeos.
+
+### Cambiado
+
+- **«Pasar página con el volumen» pasa a ser «Pasar página con teclas y mandos».** Quien lo tenía
+  apagado lo sigue teniendo apagado.
+- **La pulsación larga en Carpetas dura un poco más**, para no entrar en edición por dejar el dedo
+  quieto un momento sobre un tomo.
+- **En Carpetas se entra en edición también en un catálogo o un servidor HTTP**, con copiar y
+  descargar; lo que escribiría en él sale apagado.
+
+### Corregido
+
+- **Carpetas no enseñaba sus mensajes**: ni los fallos al borrar, mover o renombrar, ni los
+  resultados. Ahora salen como aviso.
+- **Los filtros de contraste, enfoque y reescalado** se ven también en las páginas grandes que se leen
+  a trozos al hacer zoom.
+
+## [1.9.0] — 2026-09-16
+
+Revisión general: la app deja de cerrarse cuando falla un servidor, va más rápida por la red, es más
+segura con los certificados propios y se puede usar solo con servidores, sin dar acceso a todos los
+ficheros.
+
+### Añadido
+
+- **Servidores sin permiso de ficheros.** El acceso a todos los archivos solo hace falta para el
+  teléfono y la tarjeta SD. Almacenamiento lo pide con una ficha, sin tapar los servidores, y al
+  concederlo se abre la carpeta del teléfono.
+- **Informe de cierres.** Si la app se cierra de golpe, al volver a abrirla ofrece compartir un
+  informe de lo ocurrido o descartarlo. No se envía nada salvo que elijas a dónde.
+- **Página que no carga.** En lugar de quedarse en negro, la página avisa y se reintenta con un
+  toque. Si el formato no lo admite esta versión de Android, lo dice.
+- **Huella del certificado.** Con «aceptar certificado autofirmado», la app confía en el certificado
+  que ve la primera vez y solo en ese; si el servidor presenta otro, avisa en vez de conectar. El
+  formulario enseña la huella y deja olvidarla cuando se renueva.
+
+### Cambiado
+
+- **Valores por defecto del visor**: disposición de páginas desactivada, separación entre páginas
+  al 0 %, zonas de paso de página al 35 % y sin deslizar el salto. Quien ya los había cambiado
+  conserva los suyos.
+- **SMB más rápido**: lee en tramos grandes y mantiene abierto el fichero mientras se usa.
+- **FTP más rápido**: hasta dos conexiones por servidor, y cortar una descarga a medias ya no obliga
+  a volver a conectar.
+- **HTTP** pide solo el tramo que hace falta de un fichero dentro de un CBZ.
+- **Las fotos del teléfono se amplían nítidas**, sin emborronarse al hacer zoom.
+- **Miniaturas del teléfono** más rápidas y guardadas entre sesiones.
+- **Editar un servidor lo deja en su sitio** de la lista, en lugar de mandarlo al final.
+- **La copia de seguridad de Android ya no guarda los servidores**: sus contraseñas no se podían leer
+  en otro teléfono. Si una contraseña guardada no se puede leer, su fila lo avisa.
+
+### Corregido
+
+- **Fallos de red que cerraban la app**: en Carpetas, en el visor, al pasar a la carpeta siguiente,
+  al guardar o borrar un servidor y al emitir un vídeo cuando el servidor se cae. Ahora se avisa con
+  el motivo.
+- **«Probar conexión» dice por qué falla**, en lugar de un error genérico.
+- **SMB**: un recurso compartido mal escrito, una contraseña incorrecta o un fichero que no existe
+  dan su propio mensaje.
+- **HTTP**: un error del servidor ya no se lee como si fuera la imagen.
+- **Fotos giradas** por la cámara se miden con su orientación real.
+- **Un CBZ cambiado** en el servidor o en el teléfono se vuelve a leer, en lugar de enseñar las
+  páginas viejas. Tirar para refrescar en Carpetas también olvida las imágenes que cambiaron.
+- **Recursos que quedaban abiertos**: el puerto de emisión se cierra al dejar de emitir, los CBZ
+  sueltan el fichero y borrar un servidor cierra sus conexiones y su historial.
+- **Tocar un fichero de DLNA** en Carpetas avisa de que aún no se puede abrir.
+- **Notificación de la emisión a una tele DLNA** en Android 13 o más: se pide el permiso al conectar.
+
+## [1.8.0] — 2026-09-16
+
+Emitir el visor: las páginas de un cómic o de una carpeta de imágenes se ven en un Chromecast o en
+una tele con DLNA, pasando hoja desde el teléfono.
+
+### Añadido
+
+- **Botón de emitir en el visor.** Al elegir un aparato se manda la página que se está leyendo, y
+  cada vez que se pasa de hoja se manda la nueva. El teléfono sigue enseñando la página.
+- **Girar en la tele.** Mientras se emite, un botón gira lo que se ve en la tele a la derecha o a la
+  izquierda, para que una página vertical llene una pantalla apaisada. Vale para todas las páginas
+  hasta salir del visor.
+- **Con los filtros puestos.** Si se lee en escala de grises, con los colores invertidos, sin luz
+  azul o con reescalado, contraste o enfoque, la tele ve la página igual que el teléfono.
+- **Páginas de cualquier sitio**, también de un servidor o de dentro de un CBZ. Lo que el aparato
+  sabe abrir le llega tal cual, sin trabajo para el teléfono; un formato que no lee se convierte
+  antes de mandarlo.
+- **El pase de diapositivas también emite**: cada página que pasa se ve en la tele.
+- **Al salir del visor se deja de emitir.**
+- **Con doble página no se emite**: se avisa de que hay que pasar a página simple.
+- **Probado en un Chromecast.** A una tele con DLNA se puede mandar, pero aún no se ha probado.
+
+## [1.7.0] — 2026-09-15
+
+Emitir a la tele: los vídeos se ven en un Chromecast o en una tele con DLNA, manejados desde el
+teléfono.
+
+### Añadido
+
+- **Botón de emitir en el reproductor.** Enseña los Chromecast y las teles con DLNA que haya en la
+  Wi-Fi; al elegir uno, el vídeo pasa a verse allí desde el minuto en que iba.
+- **El mando es el teléfono:** reproducir, pausa, la barra de tiempo, los saltos con doble toque y
+  el vídeo anterior y siguiente. El historial guarda el minuto de lo que se ve en la tele.
+- **Vídeos de cualquier sitio.** También los de un servidor SMB, WebDAV, FTP, S3 o pCloud, o los que
+  están dentro de un comprimido: el teléfono se los sirve a la tele por la red local.
+- **Subtítulos sueltos**, con la sincronía que se haya elegido. En el Chromecast se ven los de los
+  ficheros SRT, ASS y VTT, sin sus estilos; en una tele con DLNA depende del modelo.
+- **Sigue emitiendo con la pantalla apagada**, con un aviso desde el que pausar o dejar de emitir.
+- **Avisa cuando el aparato no puede con el vídeo**, en vez de dejar la tele en negro. Un Chromecast
+  de tercera generación, por ejemplo, no reproduce vídeo HEVC.
+- **Al salir del reproductor se deja de emitir**, y la tele se queda libre.
+
+## [1.6.0] — 2026-09-15
+
+Abrir con Tebeo: las imágenes y los vídeos se abren desde otros exploradores y desde apps de nube.
+
+### Añadido
+
+- **Tebeo aparece en «Abrir con»** para imágenes y vídeos, desde exploradores como CX Explorer, la
+  app Archivos o apps de nube como pCloud. Una imagen va al visor y un vídeo al reproductor.
+- **Anterior y siguiente, si el fichero está en el teléfono.** Un fichero de la memoria interna o de
+  la tarjeta SD se abre como desde Carpetas: se pasa a la imagen o al vídeo de al lado y queda en el
+  historial.
+- **Ficheros de apps de nube.** Lo que no tiene carpeta en el teléfono, como un vídeo de pCloud, se
+  abre suelto: se ve y se puede avanzar o retroceder dentro del vídeo, pero sin anterior ni
+  siguiente y sin entrar en el historial, porque al cerrarlo deja de poder leerse.
+- **Al salir se vuelve a la app que lo abrió**, aunque Tebeo estuviera abierto por detrás.
+
+## [1.5.0] — 2026-09-14
+
+Reproducción en miniatura: el vídeo sigue en una ventana flotante mientras se usan otras apps.
+
+### Añadido
+
+- **Reproducción en miniatura**, en el menú de tres puntos del reproductor. El vídeo se encoge a una
+  ventana flotante con la proporción del vídeo y sigue sonando mientras se usan otras apps. Ampliar
+  la ventana devuelve el reproductor a pantalla completa; cerrarla con la X deja el vídeo en pausa y
+  guarda el minuto en el historial.
+- **Miniatura al salir**, una casilla en el mismo menú, marcada de serie. Con un vídeo sonando, pulsar
+  Inicio lo pasa a la ventana solo; en pausa, o con la casilla quitada, se pausa como antes.
+- **Anterior, reproducir o pausa y siguiente** dentro de la ventana. Anterior y siguiente pasan de
+  capítulo o de vídeo igual que en la barra, y salen apagados cuando no hay a dónde ir.
+
+## [1.4.0] — 2026-09-14
+
+Los capítulos de un vídeo: anterior y siguiente saltan entre ellos, como en los reproductores de escritorio.
+
+### Añadido
+
+- **Anterior y siguiente saltan entre los capítulos del vídeo**, si el archivo los trae, que es lo
+  habitual en los MKV de series, con el opening y el ending aparte. Siguiente va al capítulo que
+  empieza después; anterior vuelve al principio del capítulo, o al de antes si acaba de empezar.
+  Desde el último o desde el primero pasan al vídeo siguiente o al anterior de la carpeta, como
+  hasta ahora, y al acabar un vídeo con «Reproducir el siguiente» se sigue pasando de vídeo.
+- **Marcas en la barra de tiempo** donde empieza cada capítulo.
+
+## [1.3.1] — 2026-09-14
+
+Bloquear la rotación ya no pasa por vertical con el giro automático del teléfono apagado.
+
+### Corregido
+
+- **Bloquear o desbloquear la rotación en el reproductor giraba la pantalla a vertical unos
+  segundos** antes de volver a horizontal, si el teléfono tenía la rotación automática apagada.
+  Cada toque al candado soltaba primero la orientación, y suelta, la pantalla tomaba la del
+  sistema. Ahora solo se suelta al salir del reproductor.
+- **Lo mismo en el visor de imágenes** al usar el botón de girar o cambiar el ajuste de
+  orientación con la rotación automática apagada.
+
 ## [1.3.0] — 2026-09-14
 
 Vídeos: se listan con su miniatura, se abren en un reproductor propio y se reanudan donde se dejaron.
