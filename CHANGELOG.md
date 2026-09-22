@@ -3,6 +3,29 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.2.0] — 2026-09-21
+
+Tebeo ya no lee solo ZIP y CBZ: abre también PDF, CB7 y EPUB, y las novelas en EPUB se leen en un
+lector de libros propio.
+
+### Añadido
+
+- **PDF.** Cada página se abre en el visor como una imagen más: zoom, doble página, filtros,
+  historial y emitir a la tele funcionan igual. Un PDF de un servidor se lee a trozos, sin bajarlo
+  entero. Si tiene contraseña, la app avisa de que no lo puede abrir.
+- **CB7 y 7z.** Se leen como un CBZ, también desde un servidor.
+- **EPUB de cómic o manga.** Se abre en el visor, con las páginas en el orden del libro.
+- **Lector de libros para las novelas en EPUB.** Reparte el texto en páginas del ancho de la
+  pantalla. Se pasa página tocando los lados o deslizando, y al acabar un capítulo se sigue con el
+  siguiente. Tiene índice, enlaces entre capítulos y una barra para saltar a cualquier punto del
+  libro. Se elige el tamaño y el tipo de letra, el interlineado, los márgenes y los colores (claro,
+  sepia u oscuro), y recuerda por dónde ibas aunque cambies la letra. El libro no sale a internet
+  ni ejecuta sus propios programas.
+- **Portadas de los formatos nuevos** en Carpetas y en el Historial, con su icono propio. En el
+  Historial, una novela dice cuánto llevas leído.
+- **«Abrir con» desde otras apps** para PDF, EPUB y CB7.
+- **Los catálogos OPDS enseñan también** los libros en PDF, EPUB y CB7.
+
 ## [2.1.0] — 2026-09-18
 
 Lo que salió al usar la 2.0 en el teléfono: volver al vídeo que suena de fondo, una barra de
