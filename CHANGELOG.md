@@ -3,6 +3,68 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.2.3] — 2026-09-22
+
+Una revisión de la app entera: el zoom se ve nítido en los cómics del teléfono, las copias dicen lo
+que dejan sin tocar y se corrigen varios fallos que salían con un servidor lento.
+
+### Corregido
+
+- **Ampliar una página de un CBZ, CB7, PDF o EPUB del teléfono la emborronaba.** Se ampliaba la
+  imagen reducida a la pantalla, no la original. Ahora se ve con el mismo detalle que una imagen
+  suelta, y lo mismo lo que llega de otra app con «Abrir con».
+- **Copiar una carpeta dentro de sí misma** creaba una cadena de carpetas vacías y acababa en error.
+  Ahora lo dice antes de empezar y no crea nada. Moverla dentro de sí misma da el mismo aviso, en
+  lugar de uno que no tenía que ver.
+- **Una copia de más de seis horas con la app en segundo plano cerraba la app** en Android 15 o
+  posterior. Ahora se para sola y un aviso explica por qué; al repetirla se salta lo ya copiado.
+- **Las miniaturas de las fotos hechas en vertical salían tumbadas** en Carpetas.
+- **Borrar en el visor con un servidor lento y pasar a otra carpeta** dejaba la nueva con las páginas
+  de la anterior, y dos borrados seguidos podían hacer reaparecer el primero.
+- **Crear, renombrar o mover con un servidor lento y abrir otra carpeta** devolvía el navegador a la
+  de antes.
+- **Algunas portadas de PDF podían no salir** en una carpeta con muchos PDF.
+- **Un ZIP o CBZ con contraseña, o con una compresión poco habitual, salía vacío** sin decir por qué.
+  Ahora lo dice, y los comprimidos en BZip2 o Deflate64 se abren.
+- **El bloqueo con huella se podía saltar atrasando el reloj del teléfono.**
+- **Conectar pCloud aceptaba una vuelta del navegador sin su comprobación de seguridad**, y con eso
+  otra app podía colar su cuenta mientras se conectaba la tuya.
+- **«Abrir con» podía abrir otro fichero** que tuviera la misma ruta en la memoria interna y en la
+  tarjeta SD.
+- **«Probar conexión» podía enseñar el resultado de una prueba anterior** si se cambiaba el
+  formulario mientras contestaba el servidor.
+- **«Acerca de» no nombraba** SFTP, S3, pCloud, OPDS, PDF, CB7 ni EPUB.
+
+### Cambiado
+
+- **Al copiar, lo que ya está con el mismo nombre y otro tamaño se cuenta aparte**: «con otro
+  tamaño, sin tocar». Antes se contaba como si ya estuviera copiado.
+- **Copiar a un servidor SMB o FTP, o abrir un tomo que esté en uno, ya no lista la carpeta entera
+  para mirar un solo fichero.** En FTP, si el servidor lo admite; si no, se hace como antes.
+- **Las portadas de PDF se pintan a tamaño de portada**, y una página de PDF o CB7 ya vista no se
+  vuelve a pintar ni a descomprimir al volver a ella.
+
+## [2.2.2] — 2026-09-22
+
+Salir de un servidor que no contesta ya no borra la carpeta que se abre después.
+
+### Corregido
+
+- **Un servidor que no contestaba borraba la carpeta abierta después.** Si mientras un servidor
+  intentaba conectar se volvía atrás y se abría el almacenamiento del teléfono, al rendirse el
+  servidor su «no se pudo conectar» sustituía al listado del teléfono. Ahora ese aviso tardío se
+  descarta y la carpeta abierta sigue como estaba.
+
+## [2.2.1] — 2026-09-22
+
+Comprobar a mano si hay versión nueva vuelve a avisar cuando la hay.
+
+### Corregido
+
+- **«Comprobar ahora», en Ajustes, no hacía nada cuando había versión nueva.** Encontraba la
+  versión, pero el aviso no llegaba a salir. Ahora se abre con sus notas y el enlace para bajarla.
+  El aviso automático, el de una vez al día al abrir la app, sí funcionaba.
+
 ## [2.2.0] — 2026-09-21
 
 Tebeo ya no lee solo ZIP y CBZ: abre también PDF, CB7 y EPUB, y las novelas en EPUB se leen en un
