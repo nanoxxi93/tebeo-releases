@@ -3,6 +3,59 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.4.0] — 2026-09-23
+
+El lector de libros ya sirve para una novela entera: se puede buscar en el libro, dejar marcadores y
+escucharlo en voz alta, también con la pantalla apagada.
+
+### Añadido
+
+- **Buscar en el libro**, con la lupa de arriba. No mira mayúsculas ni tildes, y los resultados salen
+  por capítulo según se van encontrando, cada uno con un trozo del texto alrededor. Al tocar uno se va
+  a su página, con la palabra resaltada.
+- **Marcadores.** Con el botón de arriba se marca la página que se está leyendo, y se quita con el
+  mismo botón. Se ven en una pestaña junto al índice, con la frase que había en ese sitio, el capítulo
+  y por dónde cae en el libro. Llevan al mismo sitio aunque se cambie el tamaño de letra.
+- **Leer en voz alta**, con el botón de la barra de abajo. Usa el motor de voz del teléfono, empieza
+  en la página que se ve y la página va pasando detrás de la voz. Sigue con la pantalla apagada y con
+  la app en segundo plano; un aviso deja pausar, pasar al capítulo siguiente o parar. Calla si entra
+  una llamada o suena otra cosa, y vuelve sola después. En los ajustes de lectura se eligen la
+  velocidad, el tono, el idioma de la voz y si sigue con el capítulo siguiente. Salir del libro la
+  para.
+
+### Cambiado
+
+- **La barra de progreso del libro cuenta lo que ocupa cada capítulo.** Antes cada uno contaba igual:
+  un prólogo de dos páginas pesaba lo mismo que un capítulo de cuarenta, la barra iba a saltos y
+  arrastrarla hasta la mitad no llevaba a la mitad del libro.
+- **El índice y los marcadores van juntos**, en dos pestañas de la misma hoja.
+
+### Corregido
+
+- **Con el tema oscuro, el texto de la barra de abajo del lector se veía oscuro sobre oscuro.**
+
+## [2.3.0] — 2026-09-23
+
+Borrar deja de ser definitivo en el teléfono y en la tarjeta: lo borrado espera en una papelera y se
+puede devolver a su sitio. Y marcar muchos tomos deja de ser un toque por tomo.
+
+### Añadido
+
+- **Papelera.** En el teléfono y en la tarjeta, lo que se borra pasa a una papelera en lugar de irse
+  del todo, y no cuesta ni un segundo más: no se copia nada, solo cambia de sitio. Justo después de
+  borrar aparece un **Deshacer**; más tarde, en Ajustes › Papelera está la lista de lo que espera
+  dentro, de qué carpeta salió y cuándo, con devolverlo a su sitio o borrarlo del todo.
+  Se vacía sola pasados los días que elijas, treinta de fábrica.
+  **En un servidor no hay papelera** y se sigue borrando de verdad: allí mover cada fichero sería un
+  viaje de ida y vuelta. El aviso de borrar lo dice en cada caso, así que siempre se sabe si hay
+  vuelta atrás.
+- **Preguntar antes de borrar se puede apagar**, en Ajustes. Con la papelera puesta hay quien
+  prefiere quitarse el diálogo de en medio.
+- **Seleccionar todo e invertir la selección**, en el menú de Ver más de la pestaña Carpetas.
+  Trabajan sobre lo que se ve: con una búsqueda escrita no marcan lo que está escondido.
+- **Seleccionar lo de en medio.** Se marcan dos tomos y la opción rellena todo lo que hay entre
+  ellos. Es la forma de llevarse una serie entera sin ir tocando uno a uno.
+
 ## [2.2.3] — 2026-09-22
 
 Una revisión de la app entera: el zoom se ve nítido en los cómics del teléfono, las copias dicen lo
