@@ -1,8 +1,8 @@
 # Tebeo
 
-Visor de cómics e imágenes para Android que lee **directamente del NAS** —WebDAV, SMB, FTP, SFTP,
-S3, pCloud, catálogos OPDS— sin copiar los tomos al teléfono. Y si quieres llevártelos, los descarga
-para leer sin conexión.
+Visor de cómics, imágenes y libros para Android que lee **directamente del NAS** —WebDAV, SMB, FTP,
+SFTP, S3, pCloud, catálogos OPDS— sin copiar los tomos al teléfono. Y si quieres llevártelos, los
+descarga para leer sin conexión.
 
 Este repositorio no tiene código: solo publica los APK firmados. El código fuente es privado.
 
@@ -29,6 +29,12 @@ Los ZIP y CBZ se leen página a página: abrir la última hoja de un tomo de cie
 cuesta lo mismo que abrir la primera, porque solo se pide la página que se va a ver. En un catálogo
 OPDS que sirve los tomos por páginas, ni siquiera se abre el CBZ: se pide cada página suelta.
 
+Además de ZIP y CBZ abre CB7 y 7z, PDF y EPUB. Cada página de un PDF se ve como una imagen más, con
+zoom, doble página y filtros, y un PDF del servidor se lee a trozos, sin bajarlo entero. Los EPUB de
+cómic o manga se abren en el visor; las novelas, en un lector de libros aparte.
+
+Tebeo aparece también en «Abrir con» de otras apps, para imágenes, vídeos, CBZ, ZIP, CB7, PDF y EPUB.
+
 **Cómo se lee**
 
 Seis modos de paso de página, con salto o desplazamiento continuo. Página sencilla, doble o
@@ -41,7 +47,22 @@ con un mando o con la rueda del ratón; en manga, la flecha izquierda avanza. Al
 salta al siguiente de la carpeta, sea una carpeta de imágenes o un CBZ. Los GIF y WebP animados se
 mueven, y la página que se está viendo se puede compartir, guardar en el carrete o poner de fondo.
 
-**Copiar y descargar**
+**Libros**
+
+Las novelas en EPUB se leen en páginas del ancho de la pantalla, con índice y una barra para saltar a
+cualquier punto del libro. Se elige el tamaño y el tipo de letra, el interlineado, los márgenes y los
+colores —claro, sepia u oscuro—, y recuerda por dónde ibas aunque cambies la letra.
+
+Se puede buscar en el libro sin mirar mayúsculas ni tildes, dejar marcadores y escucharlo en voz alta
+con el motor de voz del teléfono, también con la pantalla apagada. El libro no sale a internet ni
+ejecuta sus propios programas.
+
+**Organizar, copiar y descargar**
+
+Lo que se borra en el teléfono o en la tarjeta va a una papelera, de donde se recupera durante los
+días que elijas; en un servidor se borra de verdad, y el aviso lo dice antes. Para marcar muchos
+tomos de golpe se puede seleccionar todo, invertir la selección, o marcar dos y rellenar lo de en
+medio.
 
 Lo marcado en una carpeta se copia a cualquier otro almacenamiento: del NAS al teléfono, del teléfono
 a pCloud, de un servidor a otro. Reciben copias el teléfono, SMB, FTP, SFTP, WebDAV, S3 y pCloud. La
@@ -56,7 +77,14 @@ Los vídeos de las mismas carpetas se abren en un reproductor propio, que salta 
 fichero del NAS sin bajar lo anterior: pistas de audio y subtítulos, repetición A-B, velocidad,
 gestos de tiempo, brillo y volumen, y paso automático al siguiente de la carpeta. Se controla desde
 la pantalla de bloqueo y con los botones de unos auriculares, puede seguir sonando con la app en
-segundo plano y tiene temporizador de apagado.
+segundo plano y tiene temporizador de apagado. Si el fichero trae capítulos, anterior y siguiente
+saltan entre ellos, y el vídeo se puede encoger a una ventana flotante mientras usas otras apps.
+
+**Emitir a la tele**
+
+Los vídeos y las páginas del visor se mandan a un Chromecast o a una tele con DLNA de la red local,
+estén en el teléfono, en un servidor o dentro de un CBZ. Las páginas llegan con los filtros puestos y
+se pueden girar en la tele. El teléfono hace de mando, y sigue emitiendo con la pantalla apagada.
 
 **Privacidad**
 
@@ -70,9 +98,12 @@ repositorio para saber si hay versión nueva, que no envía nada tuyo y se apaga
 
 **Qué no hace**
 
-- No lee RAR ni PDF
+- No lee RAR
 - No habla SMB1, solo SMB2 en adelante
 - DLNA, SFTP y OPDS están implementados pero aún no verificados contra un servidor real
+- Los vídeos de un servidor DLNA se listan, pero aún no se abren
+- Emitir las páginas del visor solo se ha probado en un Chromecast; los vídeos, también en una tele
+  LG con DLNA
 - De OPDS, solo la versión 1.2; no OPDS 2.0
 - S3 recibe copias, pero no borra, ni mueve, ni renombra
 - pCloud pide registrar tu propia app en su consola de desarrolladores
