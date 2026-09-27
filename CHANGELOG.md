@@ -3,6 +3,19 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.5.0] — 2026-09-26
+
+Integración completa con Rclone Crypt para leer cómics desde nubes cifradas, incluyendo optimizaciones para pCloud y seguridad mejorada.
+
+### Añadido
+
+- **Soporte para Rclone Crypt.** Ahora puedes añadir servidores del tipo "Rclone Crypt", configurando tu *remote*, contraseña cifrada y *salt*. Tebeo lanzará un demonio rclone nativo en segundo plano para leer los archivos sobre la marcha de tu nube sin descargarlos previamente al móvil.
+- **Rendimiento mejorado en la nube cifrada.** Uso de caché interno y tamaño de bloque grande (`--vfs-cache-mode full`, `--vfs-read-chunk-size 8M`, `--vfs-read-ahead 32M`) para que, una vez abierta una imagen, navegar entre las páginas o volver a abrirlas sea casi instantáneo.
+
+### Corregido
+
+- **Visibilidad segura de contraseñas.** El botón para "ver" la contraseña (el ojito) solo aparece al crear servidores nuevos; no al editarlos, garantizando así la confidencialidad en entornos compartidos.
+
 ## [2.4.0] — 2026-09-23
 
 El lector de libros ya sirve para una novela entera: se puede buscar en el libro, dejar marcadores y
