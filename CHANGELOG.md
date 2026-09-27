@@ -3,6 +3,16 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [2.5.0] — 2026-09-26
 
 Integración completa con Rclone Crypt para leer cómics desde nubes cifradas, incluyendo optimizaciones para pCloud y seguridad mejorada.
@@ -15,6 +25,16 @@ Integración completa con Rclone Crypt para leer cómics desde nubes cifradas, i
 ### Corregido
 
 - **Visibilidad segura de contraseñas.** El botón para "ver" la contraseña (el ojito) solo aparece al crear servidores nuevos; no al editarlos, garantizando así la confidencialidad en entornos compartidos.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [2.4.0] — 2026-09-23
 
@@ -47,6 +67,16 @@ escucharlo en voz alta, también con la pantalla apagada.
 
 - **Con el tema oscuro, el texto de la barra de abajo del lector se veía oscuro sobre oscuro.**
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [2.3.0] — 2026-09-23
 
 Borrar deja de ser definitivo en el teléfono y en la tarjeta: lo borrado espera en una papelera y se
@@ -68,6 +98,16 @@ puede devolver a su sitio. Y marcar muchos tomos deja de ser un toque por tomo.
   Trabajan sobre lo que se ve: con una búsqueda escrita no marcan lo que está escondido.
 - **Seleccionar lo de en medio.** Se marcan dos tomos y la opción rellena todo lo que hay entre
   ellos. Es la forma de llevarse una serie entera sin ir tocando uno a uno.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [2.2.3] — 2026-09-22
 
@@ -110,6 +150,16 @@ que dejan sin tocar y se corrigen varios fallos que salían con un servidor lent
 - **Las portadas de PDF se pintan a tamaño de portada**, y una página de PDF o CB7 ya vista no se
   vuelve a pintar ni a descomprimir al volver a ella.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [2.2.2] — 2026-09-22
 
 Salir de un servidor que no contesta ya no borra la carpeta que se abre después.
@@ -121,6 +171,16 @@ Salir de un servidor que no contesta ya no borra la carpeta que se abre después
   servidor su «no se pudo conectar» sustituía al listado del teléfono. Ahora ese aviso tardío se
   descarta y la carpeta abierta sigue como estaba.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [2.2.1] — 2026-09-22
 
 Comprobar a mano si hay versión nueva vuelve a avisar cuando la hay.
@@ -130,6 +190,16 @@ Comprobar a mano si hay versión nueva vuelve a avisar cuando la hay.
 - **«Comprobar ahora», en Ajustes, no hacía nada cuando había versión nueva.** Encontraba la
   versión, pero el aviso no llegaba a salir. Ahora se abre con sus notas y el enlace para bajarla.
   El aviso automático, el de una vez al día al abrir la app, sí funcionaba.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [2.2.0] — 2026-09-21
 
@@ -153,6 +223,16 @@ lector de libros propio.
   Historial, una novela dice cuánto llevas leído.
 - **«Abrir con» desde otras apps** para PDF, EPUB y CB7.
 - **Los catálogos OPDS enseñan también** los libros en PDF, EPUB y CB7.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [2.1.0] — 2026-09-18
 
@@ -182,6 +262,16 @@ edición que cabe en vertical y menús ordenados.
 - **Tocar esa notificación lleva al reproductor.** Antes no hacía nada.
 - **Abrir Tebeo con el vídeo en miniatura ya no crea otra copia de la app**, en la que el vídeo
   seguía sonando sin forma de volver a él.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [2.0.0] — 2026-09-18
 
@@ -238,6 +328,16 @@ teclado, mando o ratón.
 - **Los filtros de contraste, enfoque y reescalado** se ven también en las páginas grandes que se leen
   a trozos al hacer zoom.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.9.0] — 2026-09-16
 
 Revisión general: la app deja de cerrarse cuando falla un servidor, va más rápida por la red, es más
@@ -289,6 +389,16 @@ ficheros.
 - **Tocar un fichero de DLNA** en Carpetas avisa de que aún no se puede abrir.
 - **Notificación de la emisión a una tele DLNA** en Android 13 o más: se pide el permiso al conectar.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.8.0] — 2026-09-16
 
 Emitir el visor: las páginas de un cómic o de una carpeta de imágenes se ven en un Chromecast o en
@@ -311,6 +421,16 @@ una tele con DLNA, pasando hoja desde el teléfono.
 - **Con doble página no se emite**: se avisa de que hay que pasar a página simple.
 - **Probado en un Chromecast.** A una tele con DLNA se puede mandar, pero aún no se ha probado.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.7.0] — 2026-09-15
 
 Emitir a la tele: los vídeos se ven en un Chromecast o en una tele con DLNA, manejados desde el
@@ -331,6 +451,16 @@ teléfono.
   de tercera generación, por ejemplo, no reproduce vídeo HEVC.
 - **Al salir del reproductor se deja de emitir**, y la tele se queda libre.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.6.0] — 2026-09-15
 
 Abrir con Tebeo: las imágenes y los vídeos se abren desde otros exploradores y desde apps de nube.
@@ -347,6 +477,16 @@ Abrir con Tebeo: las imágenes y los vídeos se abren desde otros exploradores y
   siguiente y sin entrar en el historial, porque al cerrarlo deja de poder leerse.
 - **Al salir se vuelve a la app que lo abrió**, aunque Tebeo estuviera abierto por detrás.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.5.0] — 2026-09-14
 
 Reproducción en miniatura: el vídeo sigue en una ventana flotante mientras se usan otras apps.
@@ -362,6 +502,16 @@ Reproducción en miniatura: el vídeo sigue en una ventana flotante mientras se 
 - **Anterior, reproducir o pausa y siguiente** dentro de la ventana. Anterior y siguiente pasan de
   capítulo o de vídeo igual que en la barra, y salen apagados cuando no hay a dónde ir.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.4.0] — 2026-09-14
 
 Los capítulos de un vídeo: anterior y siguiente saltan entre ellos, como en los reproductores de escritorio.
@@ -375,6 +525,16 @@ Los capítulos de un vídeo: anterior y siguiente saltan entre ellos, como en lo
   hasta ahora, y al acabar un vídeo con «Reproducir el siguiente» se sigue pasando de vídeo.
 - **Marcas en la barra de tiempo** donde empieza cada capítulo.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.3.1] — 2026-09-14
 
 Bloquear la rotación ya no pasa por vertical con el giro automático del teléfono apagado.
@@ -387,6 +547,16 @@ Bloquear la rotación ya no pasa por vertical con el giro automático del teléf
   sistema. Ahora solo se suelta al salir del reproductor.
 - **Lo mismo en el visor de imágenes** al usar el botón de girar o cambiar el ajuste de
   orientación con la rotación automática apagada.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [1.3.0] — 2026-09-14
 
@@ -441,6 +611,16 @@ Vídeos: se listan con su miniatura, se abren en un reproductor propio y se rean
   retrasar.
 - **Los vídeos de un servidor DLNA se listan, pero todavía no se abren.**
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.2.1] — 2026-09-12
 
 Abrir la pestaña Almacenamiento ya no espera a la red.
@@ -478,6 +658,16 @@ Abrir la pestaña Almacenamiento ya no espera a la red.
   carpeta DLNA abierta, al volver dará «almacenamiento no disponible» hasta que toques «Buscar
   servidores en la red». Con un servidor dado de alta a mano no pasa.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.2.0] — 2026-09-10
 
 Dos almacenamientos en la nube: S3, con todo lo que habla su protocolo, y pCloud.
@@ -513,6 +703,16 @@ Dos almacenamientos en la nube: S3, con todo lo que habla su protocolo, y pCloud
   de vuelta, `com.nanoxxi93.tebeo://oauth2redirect` y `com.nanoxxi93.tebeo.debug://oauth2redirect`.
 - **Leer páginas y ver miniaturas desde pCloud está sin probar contra una cuenta real.** La
   conexión, el listado y crear carpetas, sí.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [1.1.0] — 2026-09-09
 
@@ -563,6 +763,16 @@ Leer un tomo comprimido en red. Funcionaba ya; lo que faltaba era que no se nota
 - **El contador decía «1 / 0» mientras se abría el tomo.** Ahora no dice nada hasta que hay páginas
   que contar.
 
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
+
 ## [1.0.1] — 2026-09-09
 
 Arreglos sobre 1.0.0. No cambia nada de lo que se sabe hacer.
@@ -600,6 +810,16 @@ Arreglos sobre 1.0.0. No cambia nada de lo que se sabe hacer.
   las imágenes enteras en la caché de páginas, expulsaba de ahí lo que se estaba leyendo y al
   volver no quedaba nada: parecía que no se cacheara. Ahora se guarda la miniatura reescalada, que
   ocupa decenas de kilobytes, y ojear una carpeta ya no compite con la lectura.
+
+## [2.6.0] - 2026-09-27
+
+Reducción drástica del peso de la aplicación y separación de arquitecturas tras la integración de Rclone, junto con una interfaz más limpia para conectarse a nubes cifradas.
+
+### Cambiado
+
+- **Descarga mucho más ligera.** Tebeo ahora distribuye paquetes separados por arquitectura (Split APKs) y utiliza una versión a medida de Rclone (Lite), reduciendo el peso de la instalación de más de 50 MB a la mitad sin perder ni una sola función.
+- **Configuración de Rclone Crypt más clara.** El campo del proveedor ahora es un cómodo menú desplegable en lugar de requerir escritura manual libre, y los campos se han reordenado lógicamente para pedir primero el proveedor y luego la dirección.
+- **Transparencia en usuarios de WebDAV y FTP sobre Rclone.** Se restauró el campo de Usuario convencional en la interfaz, prescindiendo de trucos con las URLs para facilitar la vida a los recién llegados.
 
 ## [1.0.0] — 2026-09-07
 
@@ -656,3 +876,4 @@ versión publicada.
 - SMB1 no está soportado; smbj solo habla SMB2 en adelante.
 - No hay RAR ni PDF.
 - El APK de release va firmado con la clave de depuración.
+
