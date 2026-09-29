@@ -3,6 +3,21 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.8.0] — 2026-09-29
+
+Soporte completo para subtítulos incrustados en vídeos MKV, incluyendo subtítulos gráficos Blu-ray PGS, selección automática inteligente de pistas y posicionamiento adaptativo ceñido a la imagen.
+
+### Añadido
+
+- **Subtítulos gráficos Blu-ray PGS en MKV.** El reproductor ahora decodifica y muestra con total nitidez y sincronía los subtítulos de imagen Blu-ray PGS (`S_HDMV/PGS`) contenidos dentro de archivos Matroska (MKV), preservando la paleta de color y el renderizado acelerado por hardware sin necesidad de bibliotecas externas pesadas.
+- **Selección automática e inteligente de subtítulos.** Al abrir un vídeo sin subtítulos externos, la app analiza las pistas incrustadas y selecciona automáticamente la más adecuada priorizando el idioma de la app/sistema, pistas predeterminadas o la primera pista de texto disponible, evitando tener que activarlos manualmente.
+- **Estilos tipográficos en subtítulos de texto.** Los diálogos con formato avanzado (SSA/ASS) ahora muestran negrita, cursiva, subrayado y colores propios integrados directamente en la interfaz.
+
+### Cambiado
+
+- **Posicionamiento natural y estable de subtítulos.** En modo vertical (portrait) con bandas negras, los subtítulos ya no caen al fondo del teléfono sino que se sitúan ceñidos a la base del vídeo. En modo apaisado (landscape), permanecen fijos a 24 dp de la imagen sin desplazarse detrás de los controles translúcidos de reproducción.
+- **Modularización del reproductor.** La escucha de eventos del reproductor se desacopla en componentes específicos, reduciendo la complejidad del motor de reproducción.
+
 ## [2.7.0] — 2026-09-27
 
 Soporte ampliado para reproducción de vídeo en alta resolución (1440p y 4K) con códec H.265 (HEVC) y perfiles avanzados en el reproductor integrado.
