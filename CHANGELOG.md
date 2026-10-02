@@ -3,6 +3,27 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.9.0] — 2026-10-02
+
+Modo de privacidad efímero para almacenamientos Rclone Crypt, bloqueo y desbloqueo interactivo en memoria RAM, y autorrecuperación transparente ante suspensiones o pausas en segundo plano.
+
+### Añadido
+
+- **Modo de privacidad efímero en Rclone Crypt.** Al registrar o editar un almacenamiento cifrado con Rclone, el nuevo interruptor *«Guardar claves de cifrado en el dispositivo»* permite decidir si la contraseña y el salt se guardan en el almacenamiento protegido del teléfono o si solo se retienen en memoria RAM durante la sesión actual.
+- **Desbloqueo interactivo en memoria (`CryptUnlockDialog`).** Al abrir un almacenamiento cifrado cuyas claves no están guardadas, la aplicación despliega un diálogo modal que solicita la contraseña y el salt, valida el acceso mediante descifrado de prueba y habilita la exploración sin escribir las claves en disco.
+- **Acceso protegido desde accesos directos y reanudación.** Al intentar abrir un cómic o vídeo desde la sección *«Reciente»*, la pestaña *«Historial»* o la opción *«Continuar leyendo»* perteneciente a un almacenamiento cifrado bloqueado, se intercepta la navegación y se solicita el desbloqueo interactivo antes de abrir el visor o reproductor.
+- **Botón de bloqueo manual.** En la lista de almacenamientos, los servidores cifrados desbloqueados de forma efímera muestran un botón con icono de candado que permite purgar de inmediato las credenciales de la memoria RAM, detener el subproceso nativo y volver a proteger el almacenamiento en un solo toque.
+
+### Cambiado
+
+- **Aislamiento y gestión limpia de procesos rclone.** Cada cuenta cifrada activa opera con su propio archivo de configuración aislado y puertos locales independientes asignados dinámicamente, garantizando que el cierre o modificación de una cuenta no interfiera con otros servicios.
+- **Comprobación rigurosa en el probador de conexión.** El botón *«Probar conexión»* para cuentas Rclone Crypt exige obligatoriamente las claves de descifrado y realiza una lectura de prueba (`Depth: 1`) para certificar que los contenidos remotos se descifran con éxito antes de guardar.
+
+### Corregido
+
+- **Desconexiones y errores «No se puede conectar con 127.0.0.1».** Cuando el teléfono entra en suspensión (pantalla apagada o modo Doze de Android) y el sistema operativo finaliza el subproceso nativo de rclone en segundo plano, el nuevo proveedor autorrecuperable detecta la caída y reinicia el demonio de forma completamente transparente en la siguiente acción, eliminando los fallos de red al regresar a la aplicación.
+- **Cierres inesperados al detener el demonio.** Se encapsuló la lectura del flujo de registro de rclone para capturar limpiamente `InterruptedIOException` cuando el proceso nativo es finalizado por la aplicación, evitando excepciones no controladas en el hilo de captura de salida.
+
 ## [2.8.1] — 2026-10-02
 
 Optimización integral del consumo de recursos, batería y estabilidad en tablets y dispositivos de entrada al explorar carpetas de vídeo y generar miniaturas.
