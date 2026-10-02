@@ -3,6 +3,28 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.8.1] — 2026-10-02
+
+Optimización integral del consumo de recursos, batería y estabilidad en tablets y dispositivos de entrada al explorar carpetas de vídeo y generar miniaturas.
+
+### Añadido
+
+- **Detección y rechazo de fotogramas negros.** El extractor de miniaturas analiza la luminosidad perceptiva del fotograma capturado; si la imagen inicial es totalmente oscura (habitual en intros y fundidos a negro de archivos MKV), prueba automáticamente instantes alternativos hasta encontrar un fotograma representativo o agotar candidatos.
+- **Auto-reparación de miniaturas corruptas o negras.** Al cargar una imagen previamente guardada en el disco, si resulta ser un fotograma negro, la aplicación la purga automáticamente y extrae una nueva muestra válida.
+- **Tiempos de espera adaptativos según el origen del vídeo.** Se aumentan a 8 segundos los límites de espera para vídeos alojados en servidores remotos o en la nube, garantizando que el fotograma se descargue y genere correctamente sin exceder el uso de datos ni bloquear la interfaz.
+- **Límites de seguridad en transmisiones y batería.** El servicio de transmisión a la televisión (Cast) incorpora desconexión y liberación de bloqueos de energía (`WakeLock` y `WifiLock`) con límite preventivo de 10 minutos para evitar drenajes accidentales de batería cuando la pantalla está apagada.
+
+### Cambiado
+
+- **Ahorro masivo de memoria RAM en listas.** Las miniaturas mostradas en vista de lista se escalan y comprimen a 128 píxeles en lugar de alta resolución, reduciendo el consumo de memoria en más de un 85% por fila y eliminando pausas del recolector de basura en desplazamientos rápidos.
+- **Desplazamiento ultrarrápido y fluido.** Se introduce una verificación en memoria para evitar accesos repetitivos a disco y comprobaciones de píxeles en miniaturas ya validadas, mejorando significativamente la fluidez del scroll en tablets y teléfonos con procesadores modestos.
+- **Reciclaje eficiente de interfaz.** Se optimizan las celdas de cuadrículas y listas para reutilizar los componentes visuales sin recomposiciones redundantes y se elimina el sobregiro de capas decorativas mientras se carga el contenido.
+
+### Corregido
+
+- **Cuelgues y bloqueos al entrar a carpetas con múltiples vídeos MKV.** Se serializa la extracción de fotogramas en un único hilo controlado, evitando saturar la memoria y el procesador de dispositivos de gama de entrada ante descargas o decodificaciones simultáneas masivas.
+- **Miniaturas negras en vídeos remotos.** Corregido el problema donde tiempos de espera excesivamente cortos para archivos remotos provocaban que se almacenaran imágenes vacías o negras en la caché.
+
 ## [2.8.0] — 2026-09-29
 
 Soporte completo para subtítulos incrustados en vídeos MKV, incluyendo subtítulos gráficos Blu-ray PGS, selección automática inteligente de pistas y posicionamiento adaptativo ceñido a la imagen.
