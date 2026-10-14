@@ -3,6 +3,23 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.10.0] — 2026-10-14
+
+Almacenamientos cifrados Rclone Crypt sobre almacenamiento local (memoria interna y tarjeta SD) o servidores ya registrados (pCloud, WebDAV, SMB, etc.) mediante vinculación dinámica, y creación contextual directa desde el explorador de carpetas.
+
+### Añadido
+
+- **Rclone Crypt sobre almacenamiento local y servidores existentes.** Al dar de alta o editar un almacenamiento cifrado Rclone Crypt, el nuevo selector de modo permite elegir «Almacenamiento existente» para vincularlo directamente a la memoria interna, tarjeta SD o cualquier servidor ya guardado (pCloud, WebDAV, SMB, SFTP, FTP, S3, HTTP) sin tener que reintroducir credenciales ni tokens.
+- **Acción contextual en la lista de almacenamientos.** En la pestaña Almacenamiento, el menú de tres puntos (`⋮`) de cada fila compatible ofrece «Añadir carpeta cifrada (Crypt)», abriendo el diálogo de alta con dicho almacenamiento y nombre sugerido preseleccionados.
+- **Creación directa desde el explorador de carpetas.** Al navegar dentro de cualquier carpeta en la pestaña Carpetas (explorador de archivos), el menú superior de tres puntos (`⋮`) permite crear un almacenamiento Rclone Crypt de la carpeta en la que te encuentras, precargando automáticamente el almacenamiento origen y la subcarpeta correspondiente.
+- **Vinculación dinámica de credenciales.** Las cuentas Crypt vinculadas resuelven en tiempo de ejecución las claves y tokens del servidor base; si el servidor base actualiza su contraseña o renueva su token OAuth (como en pCloud), la cuenta cifrada continúa operando sin necesidad de reconfigurarla.
+- **Creación automática de carpetas físicas locales.** Si la subcarpeta especificada en la memoria interna o tarjeta SD no existe aún físicamente en el dispositivo, Tebeo la crea automáticamente (`mkdirs()`) al probar conexión o montar el almacenamiento cifrado.
+
+### Cambiado
+
+- **Detección y notificación honesta de orígenes huérfanos.** Si un servidor base registrado es eliminado o una tarjeta SD es retirada del dispositivo, las cuentas Crypt dependientes se marcan como inaccesibles (`unreachable`) informando con claridad que el almacenamiento base ya no existe o fue eliminado, permitiendo reasignar otro origen al editar la cuenta sin perder las claves de cifrado.
+- **Migración relacional segura (Room v10).** Se incorporan las columnas `rcloneBaseStorageId` y `rcloneSubpath` a la base de datos local mediante la migración `MIGRATION_9_10`, preservando intactas las configuraciones previas.
+
 ## [2.9.0] — 2026-10-02
 
 Modo de privacidad efímero para almacenamientos Rclone Crypt, bloqueo y desbloqueo interactivo en memoria RAM, y autorrecuperación transparente ante suspensiones o pausas en segundo plano.
