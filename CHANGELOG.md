@@ -3,6 +3,14 @@
 Formato de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/); versiones según
 [SemVer](https://semver.org/lang/es/).
 
+## [2.10.1] — 2026-10-14
+
+Corrección del estado bloqueado de almacenamientos Rclone Crypt vinculados a servidores remotos (pCloud, WebDAV, etc.).
+
+### Corregido
+
+- **Estado bloqueado en Rclone Crypt vinculado.** Al crear o bloquear una cuenta Rclone Crypt efímera (sin contraseña guardada) vinculada a un servidor remoto registrado como pCloud o WebDAV, la fila de almacenamiento se muestra correctamente con su estado bloqueado («Cifrado · Toca para desbloquear») y permite su desbloqueo interactivo, eliminando el falso positivo de error («No se pudo abrir» en rojo) derivado de una discrepancia en la validación de identificadores de servidor base.
+
 ## [2.10.0] — 2026-10-14
 
 Almacenamientos cifrados Rclone Crypt sobre almacenamiento local (memoria interna y tarjeta SD) o servidores ya registrados (pCloud, WebDAV, SMB, etc.) mediante vinculación dinámica, y creación contextual directa desde el explorador de carpetas.
